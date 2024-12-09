@@ -2,3 +2,5 @@
 *.json
 /.config/nvim/undodir/
 /.config/fish/
+/.config/op/
+/.config/raycast/

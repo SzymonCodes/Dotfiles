@@ -15,18 +15,17 @@ brew "starship"
 brew "tmux"
 brew "duckdb"
 brew "fzf"
-brew "git"
 
 # Install Mac apps
 
 # Cask install
-cask "git-credential-manager"
+# cask "git-credential-manager"
 cask "1Password"
 cask "kitty"
 cask "nikitabobko/tap/aerospace"
 cask "arc"
 cask "appcleaner"
-cask "notion"
+# cask "notion"
 cask "spotify"
 cask "affinity-designer"
 cask "affinity-photo"
