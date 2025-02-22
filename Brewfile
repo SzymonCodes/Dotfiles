@@ -33,6 +33,7 @@ cask "adobe-creative-cloud"
 cask "epic-games"
 cask "raycast"
 cask "discord"
+cask "logi-options+"
 
 # Brew tap
 tap "saulpw/vd/visidata"
