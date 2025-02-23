@@ -34,6 +34,8 @@ cask "epic-games"
 cask "raycast"
 cask "discord"
 cask "logi-options+"
+cask "pronotes"
+cask "messenger"
 
 # Brew tap
 tap "saulpw/vd/visidata"
