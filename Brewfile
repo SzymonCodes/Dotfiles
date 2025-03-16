@@ -37,8 +37,8 @@ cask "affinity-photo"
 cask "raycast"
 cask "discord"
 cask "logi-options+"
-# cask "pronotes"
-cask "messenger"
+# cask "pronotes"
+# cask "messenger"
 
 # Brew tap
 tap "saulpw/vd/visidata"
