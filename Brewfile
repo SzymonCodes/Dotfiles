@@ -37,5 +37,3 @@ cask "logi-options+"
 # Brew tap
 tap "saulpw/vd/visidata"
 tap "FelixKratz/formulae"
-
-
