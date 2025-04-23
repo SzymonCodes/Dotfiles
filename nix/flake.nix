@@ -68,9 +68,7 @@
             "google-chrome"
             "obsidian"
             "spotify"
-            pkgs.raycast
-            # pkgs._1password-gui
-            # pkgs._1password-cli
+            "raycast"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
