@@ -22,7 +22,6 @@
             # IDE
             pkgs.neovim
             pkgs.tmux
-            # pkgs.ghostty
             pkgs.duckdb
             pkgs.tidy-viewer
             pkgs.quarto
@@ -48,25 +47,12 @@
             pkgs.lua-language-server
             pkgs.pyright
 
-            # Apps
-            pkgs.aerospace
-            pkgs.appcleaner
-            pkgs.google-chrome
-            pkgs.obsidian
-            pkgs.spotify
-            pkgs.raycast
-            # pkgs._1password-gui
-            # pkgs._1password-cli
-
             # System
             pkgs.mkalias
           ];
 
         homebrew = {
           enable = true;
-          # core = [
-          # "borders"
-          # ];
           taps = [
             "FelixKratz/formulae"
           ];
@@ -74,9 +60,17 @@
             "affinity-designer"
             "affinity-photo"
             "logi-options+"
-            # "ghostty"
+            "ghostty"
             "1password"
             "1password-cli"
+            "nikitabobko/tap/aerospace"
+            "appcleaner"
+            "google-chrome"
+            "obsidian"
+            "spotify"
+            pkgs.raycast
+            # pkgs._1password-gui
+            # pkgs._1password-cli
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
