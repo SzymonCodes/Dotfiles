@@ -1,10 +1,11 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "Simon's nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
@@ -14,6 +15,7 @@
         # $ nix-env -qaP | grep wget
 
         nixpkgs.config.allowUnfree = true;
+        nixpkgs.config.allowBroken = true;
 
         environment.systemPackages =
           [ 
@@ -60,26 +62,27 @@
             pkgs.mkalias
           ];
 
-        homebrew = [
+        homebrew = {
           enable = true;
-          core = [
-            "borders";
-          ];
+          # core = [
+          # "borders"
+          # ];
           taps = [
-            "FelixKratz/formulae":
+            "FelixKratz/formulae"
           ];
           casks = [
-            "affinity-designer";
-            "affinity-photo";
-            "logi-options+";
+            "affinity-designer"
+            "affinity-photo"
+            "logi-options+"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
-        ];
+        };
 
         fonts.packages = [
-          (pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; });
+          # (pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; })
+          pkgs.nerd-fonts.jetbrains-mono
         ];
 
         system.activationScripts.applications.text = let
@@ -106,14 +109,14 @@
           dock.autohide = true;
           dock.wvous-bl-corner = 1;
           dock.persistent-apps = [
-              "${pkgs.ghostty}/Applications/Ghostty.app";
-              "${pkgs.obsidian}/Applications/Obsidian.app";
-              "${pkgs.google-chrome}/Applications/Google Chrome.app";
-              "${pkgs.spotify}/Applications/Spotify.app";
-              "/Applications/Music.app";
-              "${pkgs.appcleaner}/Applications/AppCleaner.app";
+              "${pkgs.ghostty}/Applications/Ghostty.app"
+              "${pkgs.obsidian}/Applications/Obsidian.app"
+              "${pkgs.google-chrome}/Applications/Google Chrome.app"
+              "${pkgs.spotify}/Applications/Spotify.app"
+              "/Applications/Music.app"
+              "${pkgs.appcleaner}/Applications/AppCleaner.app"
           ];
-          finder.FXPrefferedViewStyle = "Nlsv";
+          finder.FXPreferredViewStyle = "Nlsv";
           loginwindow.GuestEnabled = false;
           NSGlobalDomain.AppleICUForce24HourTime = true;
           NSGlobalDomain.AppleInterfaceStyle = "Dark";
@@ -150,9 +153,9 @@
               enableRosetta = true;
 
               user = "szymon";
-            }
+            };
           }
         ];
       };
     };
-};
+}
