@@ -117,6 +117,12 @@
           NSGlobalDomain.AppleICUForce24HourTime = true;
           NSGlobalDomain.AppleInterfaceStyle = "Dark";
           NSGlobalDomain.KeyRepeat = 2;
+	  finder.FXDefaultSearchScope = "SCcf";
+	  finder._FXSortFoldersFirst = true;
+	  finder.AppleShowAllFiles = true;
+	  finder.CreateDesktop = false;
+	  finder.NewWindowTarget = "Documents";
+	  finder.ShowStatusBar = true;
         };
 
         # Necessary for using flakes on this system.
