@@ -15,7 +15,7 @@
         # $ nix-env -qaP | grep wget
 
         nixpkgs.config.allowUnfree = true;
-        nixpkgs.config.allowBroken = true;
+        # nixpkgs.config.allowBroken = true;
 
         environment.systemPackages =
           [ 
@@ -47,6 +47,9 @@
             pkgs.lua-language-server
             pkgs.pyright
 
+	    # Apps
+	    pkgs.aerospace
+
             # System
             pkgs.mkalias
           ];
@@ -59,11 +62,9 @@
           casks = [
             "affinity-designer"
             "affinity-photo"
-            "logi-options+"
             "ghostty"
             "1password"
             "1password-cli"
-            "nikitabobko/tap/aerospace"
             "appcleaner"
             "google-chrome"
             "obsidian"
@@ -110,7 +111,6 @@
               "/Applications/Google Chrome.app"
               "/Applications/Spotify.app"
               "/System/Applications/Music.app"
-              "/Applications/AppCleaner.app"
           ];
           finder.FXPreferredViewStyle = "Nlsv";
           loginwindow.GuestEnabled = false;
@@ -123,6 +123,7 @@
 	  finder.CreateDesktop = false;
 	  finder.NewWindowTarget = "Documents";
 	  finder.ShowStatusBar = true;
+	  WindowManager.EnableStandardClickToShowDesktop = false;
         };
 
         # Necessary for using flakes on this system.
@@ -153,9 +154,7 @@
             nix-homebrew = {
               enable = true;
               enableRosetta = true;
-
               user = "szymon";
-
               autoMigrate = true;
             };
           }
