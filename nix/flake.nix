@@ -24,6 +24,7 @@
             pkgs.duckdb
             pkgs.tidy-viewer
             pkgs.quarto
+            pkgs.micromamba
 
             # CLIs 
             pkgs.starship
