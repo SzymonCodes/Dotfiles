@@ -105,12 +105,12 @@
 	  dock.mru-spaces = false;
 	  dock.show-recents = false;
           dock.persistent-apps = [
-              "${pkgs.ghostty}/Applications/Ghostty.app"
-              "${pkgs.obsidian}/Applications/Obsidian.app"
-              "${pkgs.google-chrome}/Applications/Google Chrome.app"
-              "${pkgs.spotify}/Applications/Spotify.app"
-              "/Applications/Music.app"
-              "${pkgs.appcleaner}/Applications/AppCleaner.app"
+              "/Applications/Ghostty.app"
+              "/Applications/Obsidian.app"
+              "/Applications/Google Chrome.app"
+              "/Applications/Spotify.app"
+              "/System/Applications/Music.app"
+              "/Applications/AppCleaner.app"
           ];
           finder.FXPreferredViewStyle = "Nlsv";
           loginwindow.GuestEnabled = false;
