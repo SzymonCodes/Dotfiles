@@ -76,7 +76,6 @@
         };
 
         fonts.packages = [
-          # (pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; })
           pkgs.nerd-fonts.jetbrains-mono
         ];
 
@@ -102,9 +101,11 @@
 
         system.defaults = {
           dock.autohide = true;
-          dock.wvous-bl-corner = 1;
+          dock.wvous-br-corner = 1;
+	  dock.mru-spaces = false;
+	  dock.show-recents = false;
           dock.persistent-apps = [
-              # "${pkgs.ghostty}/Applications/Ghostty.app"
+              "${pkgs.ghostty}/Applications/Ghostty.app"
               "${pkgs.obsidian}/Applications/Obsidian.app"
               "${pkgs.google-chrome}/Applications/Google Chrome.app"
               "${pkgs.spotify}/Applications/Spotify.app"
