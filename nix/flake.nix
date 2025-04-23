@@ -22,7 +22,7 @@
             # IDE
             pkgs.neovim
             pkgs.tmux
-            pkgs.ghostty
+            # pkgs.ghostty
             pkgs.duckdb
             pkgs.tidy-viewer
             pkgs.quarto
@@ -55,8 +55,8 @@
             pkgs.obsidian
             pkgs.spotify
             pkgs.raycast
-            pkgs._1password-gui
-            pkgs._1password-cli
+            # pkgs._1password-gui
+            # pkgs._1password-cli
 
             # System
             pkgs.mkalias
@@ -74,6 +74,9 @@
             "affinity-designer"
             "affinity-photo"
             "logi-options+"
+            # "ghostty"
+            "1password"
+            "1password-cli"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
@@ -109,7 +112,7 @@
           dock.autohide = true;
           dock.wvous-bl-corner = 1;
           dock.persistent-apps = [
-              "${pkgs.ghostty}/Applications/Ghostty.app"
+              # "${pkgs.ghostty}/Applications/Ghostty.app"
               "${pkgs.obsidian}/Applications/Obsidian.app"
               "${pkgs.google-chrome}/Applications/Google Chrome.app"
               "${pkgs.spotify}/Applications/Spotify.app"
@@ -153,6 +156,8 @@
               enableRosetta = true;
 
               user = "szymon";
+
+              autoMigrate = true;
             };
           }
         ];
