@@ -47,8 +47,8 @@
             pkgs.lua-language-server
             pkgs.pyright
 
-	    # Apps
-	    pkgs.aerospace
+	          # Apps
+	          pkgs.aerospace
 
             # System
             pkgs.mkalias
@@ -103,27 +103,27 @@
         system.defaults = {
           dock.autohide = true;
           dock.wvous-br-corner = 1;
-	  dock.mru-spaces = false;
-	  dock.show-recents = false;
+          dock.mru-spaces = false;
+          dock.show-recents = false;
           dock.persistent-apps = [
-              "/Applications/Ghostty.app"
-              "/Applications/Obsidian.app"
-              "/Applications/Google Chrome.app"
-              "/Applications/Spotify.app"
-              "/System/Applications/Music.app"
+            "/Applications/Ghostty.app"
+            "/Applications/Obsidian.app"
+            "/Applications/Google Chrome.app"
+            "/Applications/Spotify.app"
+            "/System/Applications/Music.app"
           ];
           finder.FXPreferredViewStyle = "Nlsv";
           loginwindow.GuestEnabled = false;
           NSGlobalDomain.AppleICUForce24HourTime = true;
           NSGlobalDomain.AppleInterfaceStyle = "Dark";
           NSGlobalDomain.KeyRepeat = 2;
-	  finder.FXDefaultSearchScope = "SCcf";
-	  finder._FXSortFoldersFirst = true;
-	  finder.AppleShowAllFiles = true;
-	  finder.CreateDesktop = false;
-	  finder.NewWindowTarget = "Documents";
-	  finder.ShowStatusBar = true;
-	  WindowManager.EnableStandardClickToShowDesktop = false;
+          finder.FXDefaultSearchScope = "SCcf";
+          finder._FXSortFoldersFirst = true;
+          finder.AppleShowAllFiles = true;
+          finder.CreateDesktop = false;
+          finder.NewWindowTarget = "Documents";
+          finder.ShowStatusBar = true;
+          WindowManager.EnableStandardClickToShowDesktop = false;
         };
 
         # Necessary for using flakes on this system.
